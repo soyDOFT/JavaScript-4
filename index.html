@@ -14,14 +14,14 @@
         <form id="form" onsubmit="return fillData()">
             <div class="form-header"><p>BUDGET TRACKER</p></div>
             <label class="label" for="income">Income:</label>
-            <input class="input" name="income" type="text" pattern="[0-9]" required>
+            <input class="input" name="income" type="text" pattern="[0-9]*?.[0-9]*?" required>
             <label class="label" for="income-desc">Income Description:</label>
-            <input class="input" name="income-desc" type="text" required>
+            <input class="input" name="income-desc" maxlength="200" minlength="1" type="text" required>
             <label class="label" for="expense">Expense:</label>
-            <input class="input" name="expense" type="text" pattern="[0-9]" required>
+            <input class="input" name="expense" type="text" pattern="[0-9]*?.[0-9]*?" required>
             <label class="label" for="expense-desc">Expense Description:</label>
-            <input class="input" name="expense-desc" type="text" required>
-            <input type="submit" id="submit-btn">Submit</input>
+            <input class="input" name="expense-desc" maxlength="200" minlength="1" type="text" required>
+            <input type="submit" id="submit-btn" value="Submit"></input>
             <article id="output">
             </article>
         </form>

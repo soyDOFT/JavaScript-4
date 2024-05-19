@@ -1,7 +1,9 @@
 html {
   margin: 0;
   padding: 0;
-  background-color: #ECEBC9;
+  height: 100%;
+  background: linear-gradient(#ECEBC9, #C4DEA4);
+  background-repeat: no-repeat;
 }
 
 body {
@@ -22,7 +24,7 @@ body {
 #container {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: 1fr max(50vmin, 1000px) 1fr;
+  grid-template-rows: 1fr 100% 1fr;
 }
 
 .form-header {
@@ -54,6 +56,7 @@ body {
 }
 
 #output {
+  display: none;
   margin: 30px;
   border: 2px solid #C4DEA4;
   font-weight: 200;
@@ -62,7 +65,7 @@ body {
 
 #submit-btn {
   width: 100px;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 5px 5px;
   background-color: #C4DEA4;
   border: none;

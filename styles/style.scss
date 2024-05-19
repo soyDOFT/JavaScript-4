@@ -3,11 +3,16 @@ $secondaryColor : #C4DEA4;
 $tertiaryColor: #F6F6DB;
 $contrastColor : #ECEBC9;
 $textColor : #000000;
+@mixin gradient($firstColor, $secondColor) {
+    background: linear-gradient($firstColor, $secondColor);
+    background-repeat: no-repeat;
+}
 
 html {
     margin: 0;
     padding: 0;
-    background-color: $contrastColor;
+    height: 100%;
+    @include gradient($contrastColor, $secondaryColor)
 }
 
 body {
@@ -28,7 +33,7 @@ body {
 #container {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: 1fr max(50vmin, 1000px) 1fr;
+    grid-template-rows: 1fr 100% 1fr;
 }
 
 .form-header{
@@ -61,6 +66,7 @@ body {
 }
 
 #output {
+    display: none;
     margin: 30px;
     border: 2px solid $secondaryColor;
     font-weight: 200;
@@ -69,7 +75,7 @@ body {
 
 #submit-btn {
     width: 100px;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 5px 5px;
     background-color: $secondaryColor;
     border: none;
