@@ -1,0 +1,83 @@
+$primaryColor : rgb(255, 255, 255);
+$secondaryColor : #C4DEA4;
+$tertiaryColor: #F6F6DB;
+$contrastColor : #ECEBC9;
+$textColor : #000000;
+
+html {
+    margin: 0;
+    padding: 0;
+    background-color: $contrastColor;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.noto-serif-style {
+    font-family: 'Noto Serif', serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr max(50vmin, 1000px) 1fr;
+}
+
+.form-header{
+    background-color: $secondaryColor;
+    color: $textColor;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    background-color: $primaryColor;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    box-shadow: 5px 5px 5px $textColor;
+}
+
+.input {
+    width: 150px;
+    margin: 10px 20px;
+}
+
+.label {
+    margin: 10px 10px 5px;
+    color: $textColor;
+    font-weight: 200;
+}
+
+#output {
+    margin: 30px;
+    border: 2px solid $secondaryColor;
+    font-weight: 200;
+    padding: 20px;
+}
+
+#submit-btn {
+    width: 100px;
+    margin: 0 auto;
+    padding: 5px 5px;
+    background-color: $secondaryColor;
+    border: none;
+    transition-duration: 0.1s;
+
+    &:hover {
+        background-color: $primaryColor;
+        border: 2px solid $secondaryColor;
+        cursor: pointer;
+    }
+}

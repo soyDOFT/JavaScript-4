@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
-<body>
+<body class="noto-serif-style">
     <section id="container">
-        <form id="form">
-            <div></div>
-            <label class="label" for="name">Name:</label>
-            <input class="input" name="name" type="text">
+        <form id="form" onsubmit="return fillData()">
+            <div class="form-header"><p>BUDGET TRACKER</p></div>
             <label class="label" for="income">Income:</label>
-            <input class="input" name="income" type="text" pattern="[0-9]/g">
+            <input class="input" name="income" type="text" pattern="[0-9]" required>
             <label class="label" for="income-desc">Income Description:</label>
-            <input class="input" name="income-desc" type="text">
-            <label class="label" for="income-desc">Expense:</label>
-            <input class="input" name="income-desc" type="text">
-            <label class="label" for="income-desc">Expense Description:</label>
-            <input class="input" name="income-desc" type="text">
+            <input class="input" name="income-desc" type="text" required>
+            <label class="label" for="expense">Expense:</label>
+            <input class="input" name="expense" type="text" pattern="[0-9]" required>
+            <label class="label" for="expense-desc">Expense Description:</label>
+            <input class="input" name="expense-desc" type="text" required>
+            <input type="submit" id="submit-btn">Submit</input>
+            <article id="output">
+            </article>
         </form>
     </section>
     <script src="script.js"></script>
